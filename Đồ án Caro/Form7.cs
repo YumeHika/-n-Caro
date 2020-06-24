@@ -15,7 +15,7 @@ namespace Đồ_án_Caro
         public Form7()
         {
             InitializeComponent();
-            MessageBox.Show("awd");
+            
         }
     }
 }
