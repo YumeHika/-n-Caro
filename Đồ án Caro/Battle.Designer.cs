@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Battle));
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnLAN = new System.Windows.Forms.Button();
             this.prsCountdown = new System.Windows.Forms.ProgressBar();
@@ -56,6 +57,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.BtnLAN);
             this.panel1.Controls.Add(this.prsCountdown);
             this.panel1.Controls.Add(this.IPTxb);
@@ -63,17 +65,20 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.PlayerName_txb);
-            this.panel1.Location = new System.Drawing.Point(437, 94);
+            this.panel1.Location = new System.Drawing.Point(583, 116);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(169, 425);
+            this.panel1.Size = new System.Drawing.Size(249, 533);
             this.panel1.TabIndex = 11;
             // 
             // BtnLAN
             // 
-            this.BtnLAN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLAN.Location = new System.Drawing.Point(114, 28);
+            this.BtnLAN.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLAN.Image = ((System.Drawing.Image)(resources.GetObject("BtnLAN.Image")));
+            this.BtnLAN.Location = new System.Drawing.Point(152, 34);
+            this.BtnLAN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnLAN.Name = "BtnLAN";
-            this.BtnLAN.Size = new System.Drawing.Size(52, 27);
+            this.BtnLAN.Size = new System.Drawing.Size(69, 33);
             this.BtnLAN.TabIndex = 0;
             this.BtnLAN.Text = "LAN";
             this.BtnLAN.UseVisualStyleBackColor = true;
@@ -81,25 +86,28 @@
             // 
             // prsCountdown
             // 
-            this.prsCountdown.Location = new System.Drawing.Point(2, 132);
+            this.prsCountdown.Location = new System.Drawing.Point(3, 162);
+            this.prsCountdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prsCountdown.Name = "prsCountdown";
-            this.prsCountdown.Size = new System.Drawing.Size(163, 24);
+            this.prsCountdown.Size = new System.Drawing.Size(217, 30);
             this.prsCountdown.TabIndex = 2;
             // 
             // IPTxb
             // 
             this.IPTxb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IPTxb.Location = new System.Drawing.Point(7, 29);
+            this.IPTxb.Location = new System.Drawing.Point(9, 36);
+            this.IPTxb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.IPTxb.Name = "IPTxb";
-            this.IPTxb.Size = new System.Drawing.Size(105, 26);
+            this.IPTxb.Size = new System.Drawing.Size(139, 30);
             this.IPTxb.TabIndex = 1;
             this.IPTxb.Text = "127.0.0.1";
             // 
             // Player_Ava_ptb
             // 
-            this.Player_Ava_ptb.Location = new System.Drawing.Point(113, 73);
+            this.Player_Ava_ptb.Location = new System.Drawing.Point(151, 90);
+            this.Player_Ava_ptb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Player_Ava_ptb.Name = "Player_Ava_ptb";
-            this.Player_Ava_ptb.Size = new System.Drawing.Size(52, 53);
+            this.Player_Ava_ptb.Size = new System.Drawing.Size(69, 65);
             this.Player_Ava_ptb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Player_Ava_ptb.TabIndex = 0;
             this.Player_Ava_ptb.TabStop = false;
@@ -107,91 +115,114 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 8);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.Location = new System.Drawing.Point(8, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 19);
+            this.label1.Size = new System.Drawing.Size(108, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "IP Server:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 78);
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(3, 96);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 19);
+            this.label2.Size = new System.Drawing.Size(140, 21);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Lượt chơi của";
+            this.label2.Text = "Player\'s turn:";
             // 
             // PlayerName_txb
             // 
             this.PlayerName_txb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerName_txb.Location = new System.Drawing.Point(2, 100);
+            this.PlayerName_txb.Location = new System.Drawing.Point(3, 123);
+            this.PlayerName_txb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PlayerName_txb.Name = "PlayerName_txb";
-            this.PlayerName_txb.Size = new System.Drawing.Size(105, 26);
+            this.PlayerName_txb.Size = new System.Drawing.Size(139, 30);
             this.PlayerName_txb.TabIndex = 4;
             // 
             // pnlInfo
             // 
             this.pnlInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlInfo.BackgroundImage")));
             this.pnlInfo.Controls.Add(this.button1);
             this.pnlInfo.Controls.Add(this.richTextBox1);
             this.pnlInfo.Controls.Add(this.QuitBtn);
             this.pnlInfo.Controls.Add(this.ChangeModeBtn);
             this.pnlInfo.Controls.Add(this.NewGameBtn);
-            this.pnlInfo.Location = new System.Drawing.Point(95, 6);
+            this.pnlInfo.Location = new System.Drawing.Point(127, 11);
+            this.pnlInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(511, 82);
+            this.pnlInfo.Size = new System.Drawing.Size(681, 101);
             this.pnlInfo.TabIndex = 10;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 31);
+            this.button1.Size = new System.Drawing.Size(120, 38);
             this.button1.TabIndex = 15;
             this.button1.Text = "Menu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(327, 0);
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.richTextBox1.Location = new System.Drawing.Point(441, 1);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(181, 79);
+            this.richTextBox1.Size = new System.Drawing.Size(240, 96);
             this.richTextBox1.TabIndex = 14;
             this.richTextBox1.Text = "LUẬT:\n- Ai có 5 con trên 1 hàng trước sẽ thắng.\n- Nếu hết thời gian đếm ngược mà " +
     "không đi được sẽ tính là thua.";
             // 
             // QuitBtn
             // 
-            this.QuitBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuitBtn.Location = new System.Drawing.Point(195, 3);
+            this.QuitBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.QuitBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("QuitBtn.BackgroundImage")));
+            this.QuitBtn.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuitBtn.Location = new System.Drawing.Point(260, 4);
+            this.QuitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.QuitBtn.Name = "QuitBtn";
-            this.QuitBtn.Size = new System.Drawing.Size(90, 31);
+            this.QuitBtn.Size = new System.Drawing.Size(120, 38);
             this.QuitBtn.TabIndex = 3;
             this.QuitBtn.Text = "Quit";
-            this.QuitBtn.UseVisualStyleBackColor = true;
+            this.QuitBtn.UseVisualStyleBackColor = false;
             this.QuitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
             // 
             // ChangeModeBtn
             // 
-            this.ChangeModeBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangeModeBtn.Location = new System.Drawing.Point(99, 3);
+            this.ChangeModeBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ChangeModeBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChangeModeBtn.BackgroundImage")));
+            this.ChangeModeBtn.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangeModeBtn.Location = new System.Drawing.Point(132, 4);
+            this.ChangeModeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ChangeModeBtn.Name = "ChangeModeBtn";
-            this.ChangeModeBtn.Size = new System.Drawing.Size(90, 31);
+            this.ChangeModeBtn.Size = new System.Drawing.Size(120, 38);
             this.ChangeModeBtn.TabIndex = 2;
             this.ChangeModeBtn.Text = "Change Mode";
-            this.ChangeModeBtn.UseVisualStyleBackColor = true;
+            this.ChangeModeBtn.UseVisualStyleBackColor = false;
             // 
             // NewGameBtn
             // 
-            this.NewGameBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewGameBtn.Location = new System.Drawing.Point(3, 48);
+            this.NewGameBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("NewGameBtn.BackgroundImage")));
+            this.NewGameBtn.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewGameBtn.Location = new System.Drawing.Point(4, 59);
+            this.NewGameBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NewGameBtn.Name = "NewGameBtn";
-            this.NewGameBtn.Size = new System.Drawing.Size(90, 31);
+            this.NewGameBtn.Size = new System.Drawing.Size(120, 38);
             this.NewGameBtn.TabIndex = 0;
             this.NewGameBtn.Text = "New Game";
             this.NewGameBtn.UseVisualStyleBackColor = true;
@@ -201,18 +232,20 @@
             // 
             this.pnlLogo.BackColor = System.Drawing.SystemColors.Control;
             this.pnlLogo.Controls.Add(this.pictureBox1);
-            this.pnlLogo.Location = new System.Drawing.Point(6, 6);
+            this.pnlLogo.Location = new System.Drawing.Point(8, 7);
+            this.pnlLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(82, 82);
+            this.pnlLogo.Size = new System.Drawing.Size(109, 101);
             this.pnlLogo.TabIndex = 9;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::Đồ_án_Caro.Properties.Resources.Logo_Caro;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(76, 76);
+            this.pictureBox1.Size = new System.Drawing.Size(101, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -220,9 +253,11 @@
             // pnlChessBoard
             // 
             this.pnlChessBoard.BackColor = System.Drawing.Color.White;
-            this.pnlChessBoard.Location = new System.Drawing.Point(6, 94);
+            this.pnlChessBoard.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlChessBoard.BackgroundImage")));
+            this.pnlChessBoard.Location = new System.Drawing.Point(1, 116);
+            this.pnlChessBoard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlChessBoard.Name = "pnlChessBoard";
-            this.pnlChessBoard.Size = new System.Drawing.Size(425, 425);
+            this.pnlChessBoard.Size = new System.Drawing.Size(574, 533);
             this.pnlChessBoard.TabIndex = 8;
             // 
             // tmCountdown
@@ -231,13 +266,15 @@
             // 
             // Battle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 538);
-            this.Controls.Add(this.panel1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(831, 645);
             this.Controls.Add(this.pnlInfo);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.pnlChessBoard);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Battle";
             this.Text = "Battle";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Battle_FormClosing);

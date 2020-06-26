@@ -41,47 +41,47 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-61, -38);
+            this.pictureBox1.Location = new System.Drawing.Point(-66, -30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(868, 507);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(868, 596);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.Location = new System.Drawing.Point(25, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 25);
+            this.label1.Size = new System.Drawing.Size(165, 26);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Danh sách phòng chơi";
+            this.label1.Text = "list of rooms:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(272, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(280, 25);
+            this.label2.Size = new System.Drawing.Size(270, 26);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Danh sách người chơi đang đợi";
+            this.label2.Text = "list of waiting players:";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(607, 385);
+            this.button1.Location = new System.Drawing.Point(590, 456);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 43);
             this.button1.TabIndex = 3;
-            this.button1.Text = "Tạo phòng";
+            this.button1.Text = "create room";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // listView1
@@ -90,9 +90,9 @@
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(30, 73);
+            this.listView1.Location = new System.Drawing.Point(12, 73);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(202, 355);
+            this.listView1.Size = new System.Drawing.Size(223, 355);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 511);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);

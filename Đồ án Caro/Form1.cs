@@ -21,5 +21,10 @@ namespace Đồ_án_Caro
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
