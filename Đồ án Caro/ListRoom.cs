@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Đồ_án_Caro
 {
-    public partial class Form1 : Form
+    public partial class ListRoom : Form
     {
-        public Form1()
+        public ListRoom()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

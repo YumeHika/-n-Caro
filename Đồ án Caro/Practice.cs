@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Đồ_án_Caro
 {
-    public partial class Form8 : Form
+    public partial class Practice : Form
     {
-        public Form8()
+        public Practice()
         {
             InitializeComponent();
         }

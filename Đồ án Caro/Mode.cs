@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Đồ_án_Caro
 {
-    public partial class Form7 : Form
+    public partial class Mode : Form
     {
-        public Form7()
+        public Mode()
         {
             InitializeComponent();
             
