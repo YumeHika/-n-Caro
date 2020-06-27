@@ -70,11 +70,11 @@ namespace Đồ_án_Caro
             this.ChessBoard = chessBoard;
             this.playername = Player_Name;
             this.playermark = Mark;
-
-            this.Player = new List<Player>() 
-            { 
-                new Player("Player_1", Image.FromFile(Application.StartupPath + "\\Resources\\X.png")),
-                new Player("Player_2", Image.FromFile(Application.StartupPath + "\\Resources\\O.png"))
+            this.Player = new List<Player>()
+            {
+                
+                new Player("Player_1", Properties.Resources.X),
+                new Player("Player_2", Properties.Resources.O)
             };
 
             PlayTimeLine = new Stack<PlayInfo>();

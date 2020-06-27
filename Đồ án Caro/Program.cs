@@ -16,7 +16,7 @@ namespace Đồ_án_Caro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new Battle());
         }
     }
 }
