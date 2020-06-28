@@ -40,7 +40,7 @@ namespace Đồ_án_Caro
         Socket server;
         public void CreateServer()
         {
-            IPEndPoint iep = new IPEndPoint(IPAddress.Parse(IP), Port);
+            IPEndPoint iep = new IPEndPoint(IPAddress.Any, Port);
             server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             server.Bind(iep);
