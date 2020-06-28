@@ -20,14 +20,14 @@ namespace Đồ_án_Caro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             ListRoom listroom = new ListRoom();
             listroom.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             ListRoom listroom = new ListRoom();
             listroom.Show();
         }
