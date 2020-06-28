@@ -41,10 +41,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, -6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(15, -7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(588, 423);
+            this.pictureBox1.Size = new System.Drawing.Size(784, 528);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -55,10 +55,9 @@
             this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(19, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(25, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 20);
+            this.label1.Size = new System.Drawing.Size(165, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "list of rooms:";
             // 
@@ -68,10 +67,9 @@
             this.label2.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(204, 26);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(272, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 20);
+            this.label2.Size = new System.Drawing.Size(270, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "list of waiting players:";
             // 
@@ -80,10 +78,10 @@
             this.button1.Font = new System.Drawing.Font("Showcard Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(442, 370);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(593, 430);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 35);
+            this.button1.Size = new System.Drawing.Size(168, 43);
             this.button1.TabIndex = 3;
             this.button1.Text = "create room";
             this.button1.UseVisualStyleBackColor = true;
@@ -94,10 +92,10 @@
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.ForeColor = System.Drawing.Color.White;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(11, 59);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Location = new System.Drawing.Point(15, 73);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(168, 289);
+            this.listView1.Size = new System.Drawing.Size(223, 355);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -107,27 +105,27 @@
             this.listView2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView2.ForeColor = System.Drawing.Color.White;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(208, 59);
-            this.listView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView2.Location = new System.Drawing.Point(277, 73);
+            this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(207, 289);
+            this.listView2.Size = new System.Drawing.Size(275, 355);
             this.listView2.TabIndex = 5;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.SmallIcon;
             // 
-            // Form8
+            // ListRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 415);
+            this.ClientSize = new System.Drawing.Size(806, 503);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form8";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "ListRoom";
             this.Text = "Form8";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
