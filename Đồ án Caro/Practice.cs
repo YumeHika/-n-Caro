@@ -182,5 +182,12 @@ namespace Đồ_án_Caro
             //
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Mode mode = new Mode();
+            mode.Show();
+            Quit();
+        }
     }
 }

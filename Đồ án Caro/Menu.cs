@@ -19,7 +19,9 @@ namespace Đồ_án_Caro
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            Mode mode = new Mode();
+            mode.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
