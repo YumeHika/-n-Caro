@@ -16,7 +16,7 @@ namespace Đồ_án_Caro
     public partial class Battle : Form
     {
         #region Properties
-        Chess_Board_Manager ChessBoard;
+        Chess_Board_Manager_Battle ChessBoard;
         SocketManager socket;
         #endregion
 
@@ -26,7 +26,7 @@ namespace Đồ_án_Caro
 
             Control.CheckForIllegalCrossThreadCalls = false;
 
-            ChessBoard = new Chess_Board_Manager(pnlChessBoard, PlayerName_txb, Player_Ava_ptb);
+            ChessBoard = new Chess_Board_Manager_Battle(pnlChessBoard, PlayerName_txb, Player_Ava_ptb);
             ChessBoard.Ended_Game += ChessBoard_Ended_Game;
             ChessBoard.Player_Marked += ChessBoard_Player_Marked;
 
@@ -66,7 +66,7 @@ namespace Đồ_án_Caro
             socket.Send(new SocketData((int)SocketCommand.END_GAME, " ", new Point()));
         }
 
-        private void ChessBoard_Player_Marked(object sender, ButtonClickEvent e)
+        private void ChessBoard_Player_Marked(object sender, ButtonClickEventBattle e)
         {
             tmCountdown.Start();
             pnlChessBoard.Enabled = false;

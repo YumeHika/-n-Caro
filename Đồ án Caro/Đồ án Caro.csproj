@@ -53,7 +53,8 @@
     <Compile Include="Battle.Designer.cs">
       <DependentUpon>Battle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chess_Board_Manager.cs" />
+    <Compile Include="Chess_Board_Manager_Battle.cs" />
+    <Compile Include="Chess_Board_Manager_Practice.cs" />
     <Compile Include="Cons.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +11,7 @@ using System.Xml.Schema;
 
 namespace Đồ_án_Caro
 {
-    public class Chess_Board_Manager
+    public class Chess_Board_Manager_Practice
     {
         #region Properties
         private Panel chessBoard;
@@ -33,9 +35,9 @@ namespace Đồ_án_Caro
 
         private List<List<Button>> matrix;
         public List<List<Button>> Matrix { get => matrix; set => matrix = value; }
-        
-        private event EventHandler<ButtonClickEvent> playerMarked;
-        public event EventHandler<ButtonClickEvent> Player_Marked
+
+        private event EventHandler<ButtonClickEventPractice> playerMarked;
+        public event EventHandler<ButtonClickEventPractice> Player_Marked
         {
             add
             {
@@ -52,11 +54,11 @@ namespace Đồ_án_Caro
         {
             add
             {
-                  EndedGame += value;
+                EndedGame += value;
             }
             remove
             {
-                  EndedGame -= value;
+                EndedGame -= value;
             }
         }
 
@@ -65,14 +67,14 @@ namespace Đồ_án_Caro
         #endregion
 
         #region Initialize
-        public Chess_Board_Manager(Panel chessBoard, TextBox Player_Name, PictureBox Mark)
+        public Chess_Board_Manager_Practice(Panel chessBoard, TextBox Player_Name, PictureBox Mark)
         {
             this.ChessBoard = chessBoard;
             this.playername = Player_Name;
             this.playermark = Mark;
             this.Player = new List<Player>()
             {
-                
+
                 new Player("Player_1", Properties.Resources.X),
                 new Player("Player_2", Properties.Resources.O)
             };
@@ -140,9 +142,9 @@ namespace Đồ_án_Caro
             ChangePlayer();
 
             if (playerMarked != null)
-                playerMarked(this, new ButtonClickEvent(GetChessPoint(btn)));
+                playerMarked(this, new ButtonClickEventPractice(GetChessPoint(btn)));
 
-            if(isEndGame(btn))
+            if (isEndGame(btn))
             {
                 EndGame();
             }
@@ -172,12 +174,40 @@ namespace Đồ_án_Caro
             if (EndedGame != null)
                 EndedGame(this, new EventArgs());
         }
-      
 
-      
+        public bool Undo()
+        {
+            bool isUndo1 = UndoAStep();
+            bool isUndo2 = UndoAStep();
+
+            PlayInfo oldPoint = PlayTimeLine.Peek();
+            Current_Player = oldPoint.CurrentPlayer == 1 ? 0 : 1;
+            return isUndo1 && isUndo2;
+        }
+
+        public bool UndoAStep()
+        {
+            if (PlayTimeLine.Count <= 0)
+                return false;
+            PlayInfo oldPoint = PlayTimeLine.Pop();
+            Button btn = Matrix[oldPoint.Point.Y][oldPoint.Point.X];
+
+            btn.BackgroundImage = null;
+            if(PlayTimeLine.Count <= 0 )
+            {
+                Current_Player = 0;
+            }
+            else
+            {
+                oldPoint = PlayTimeLine.Peek();
+            }
+
+            ChangePlayer();
+            return true;
+        }
         private bool isEndGame(Button btn)
         {
-            return isEndHorizontal(btn) || isEndVertical(btn) || isEndPrimary(btn) || isEndSub(btn) ;
+            return isEndHorizontal(btn) || isEndVertical(btn) || isEndPrimary(btn) || isEndSub(btn);
         }
         private Point GetChessPoint(Button btn)
         {
@@ -194,7 +224,7 @@ namespace Đồ_án_Caro
 
             int countLeft = 0;
 
-            for(int i = point.X; i >= 0; i--)
+            for (int i = point.X; i >= 0; i--)
             {
                 if (Matrix[point.Y][i].BackgroundImage == btn.BackgroundImage)
                 {
@@ -206,7 +236,7 @@ namespace Đồ_án_Caro
 
             int countRight = 0;
 
-            for (int i = point.X + 1 ; i < Cons.Chess_Board_Width; i++)
+            for (int i = point.X + 1; i < Cons.Chess_Board_Width; i++)
             {
                 if (Matrix[point.Y][i].BackgroundImage == btn.BackgroundImage)
                 {
@@ -254,9 +284,9 @@ namespace Đồ_án_Caro
 
             int countTop = 0;
 
-            for (int i = 0; i <= point.X ; i++)
+            for (int i = 0; i <= point.X; i++)
             {
-                if(point.X - i < 0 || point.Y - i < 0)
+                if (point.X - i < 0 || point.Y - i < 0)
                     break;
 
                 if (Matrix[point.Y - i][point.X - i].BackgroundImage == btn.BackgroundImage)
@@ -333,12 +363,12 @@ namespace Đồ_án_Caro
         #endregion
     }
 
-    public class ButtonClickEvent : EventArgs
+    public class ButtonClickEventPractice : EventArgs
     {
         private Point clickedPoint;
         public Point ClickedPoint { get => clickedPoint; set => clickedPoint = value; }
 
-        public ButtonClickEvent(Point point)
+        public ButtonClickEventPractice(Point point)
         {
             this.ClickedPoint = point;
         }
