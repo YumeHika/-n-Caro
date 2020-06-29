@@ -230,7 +230,7 @@ namespace Đồ_án_Caro
             {
                 socket.Send(new SocketData((int)SocketCommand.CHAT, textBoxchat.Text, new Point()));
                
-                listViewchat.Items.Add(name + ":" + textBoxchat.Text);
+                listViewchat.Items.Add(textBoxchat.Text);
             }
         }
     }
