@@ -90,20 +90,21 @@
             // 
             // textBoxchat
             // 
-            this.textBoxchat.Location = new System.Drawing.Point(9, 307);
+            this.textBoxchat.Location = new System.Drawing.Point(7, 357);
             this.textBoxchat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxchat.Name = "textBoxchat";
-            this.textBoxchat.Size = new System.Drawing.Size(155, 20);
+            this.textBoxchat.Size = new System.Drawing.Size(158, 20);
             this.textBoxchat.TabIndex = 6;
             this.textBoxchat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxchat_KeyPress);
             // 
             // listViewchat
             // 
+            this.listViewchat.Enabled = false;
             this.listViewchat.HideSelection = false;
             this.listViewchat.Location = new System.Drawing.Point(7, 162);
             this.listViewchat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listViewchat.Name = "listViewchat";
-            this.listViewchat.Size = new System.Drawing.Size(157, 164);
+            this.listViewchat.Size = new System.Drawing.Size(157, 191);
             this.listViewchat.TabIndex = 5;
             this.listViewchat.UseCompatibleStateImageBehavior = false;
             this.listViewchat.View = System.Windows.Forms.View.List;
