@@ -205,7 +205,7 @@ namespace Đồ_án_Caro
                     break;
                 case (int)SocketCommand.CHAT:
                     
-                    listViewchat.Items.Add(name + ":" + data.Mess);
+                    listViewchat.Items.Add( data.Mess);
                     
                     break;
                 default:
@@ -230,7 +230,7 @@ namespace Đồ_án_Caro
             {
                 socket.Send(new SocketData((int)SocketCommand.CHAT, textBoxchat.Text, new Point()));
                
-                listViewchat.Items.Add(textBoxchat.Text);
+                listViewchat.Items.Add( textBoxchat.Text);
             }
         }
     }
