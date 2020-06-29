@@ -20,16 +20,16 @@ namespace Đồ_án_Caro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ListRoom listroom = new ListRoom();
-            listroom.Show();
+            //this.Hide();
+            //Battle _battle = new Battle();
+            //_battle.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ListRoom listroom = new ListRoom();
-            listroom.Show();
+            Practice _practice = new Practice();
+            _practice.Show();
         }
     }
 }

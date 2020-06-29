@@ -20,9 +20,10 @@ namespace Đồ_án_Caro
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Mode mode = new Mode();
-            mode.Show();
+            Battle _battle  = new Battle(richTextBox1.Text);
+            _battle.Show();
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

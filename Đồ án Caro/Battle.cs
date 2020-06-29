@@ -19,15 +19,17 @@ namespace Đồ_án_Caro
         Chess_Board_Manager_Battle ChessBoard;
         SocketManager socket;
         #endregion
+         
 
-        public Battle()
+        public Battle(string textname)
         {
             InitializeComponent();
 
+            name = textname;
             Control.CheckForIllegalCrossThreadCalls = false;
 
             ChessBoard = new Chess_Board_Manager_Battle(pnlChessBoard, PlayerName_txb, Player_Ava_ptb);
-            ChessBoard.Ended_Game += ChessBoard_Ended_Game;
+            ChessBoard.Ended_Game += ChessBoard_Ended_Game; 
             ChessBoard.Player_Marked += ChessBoard_Player_Marked;
 
             prsCountdown.Step = Cons.Countdown_Step;
@@ -40,6 +42,7 @@ namespace Đồ_án_Caro
             NewGame();
 
         }
+        string name;
 
         void EndGame()
         {
@@ -80,6 +83,7 @@ namespace Đồ_án_Caro
         private void tmCountdown_Tick(object sender, EventArgs e)
         {
             prsCountdown.PerformStep();
+            label3.Text = (prsCountdown.Maximum/1000 - prsCountdown.Value/1000).ToString();
 
             if (prsCountdown.Value >= prsCountdown.Maximum)
             {
@@ -129,10 +133,13 @@ namespace Đồ_án_Caro
             }
             else
             {
+                
                 socket.isServer = false;
                 pnlChessBoard.Enabled = false;
                 Listen();
+
             }
+
         }
 
         private void Battle_Shown(object sender, EventArgs e)
@@ -175,12 +182,14 @@ namespace Đồ_án_Caro
                     }));
                     break;
                 case (int)SocketCommand.SEND_POINT:
+                    
                     this.Invoke((MethodInvoker)(() =>
                     {
                         prsCountdown.Value = 0;
                         pnlChessBoard.Enabled = true;
                         tmCountdown.Start();
                         ChessBoard.OtherPlayerMark(data.Point);
+                       
                     }));
                     break;
                 case (int)SocketCommand.END_GAME:
@@ -191,9 +200,16 @@ namespace Đồ_án_Caro
                     break;
                 case (int)SocketCommand.QUIT:
                     tmCountdown.Stop();
+
                     MessageBox.Show("Người chơi đã thoát !! ");
                     break;
+                case (int)SocketCommand.CHAT:
+                    
+                    listViewchat.Items.Add(name + ":" + data.Mess);
+                    
+                    break;
                 default:
+                    
                     break;
             }
 
@@ -205,6 +221,17 @@ namespace Đồ_án_Caro
             Mode mode = new Mode();
             mode.Show();
             Quit();
+        }
+
+        private void textBoxchat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+
+            {
+                socket.Send(new SocketData((int)SocketCommand.CHAT, textBoxchat.Text, new Point()));
+               
+                listViewchat.Items.Add(name + ":" + textBoxchat.Text);
+            }
         }
     }
 }

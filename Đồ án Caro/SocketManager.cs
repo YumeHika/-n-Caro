@@ -46,12 +46,9 @@ namespace Đồ_án_Caro
             server.Bind(iep);
             server.Listen(10);
 
-            Thread acceptClient = new Thread(() => 
-            {
-                client = server.Accept();
-            });
-            acceptClient.IsBackground = true;
-            acceptClient.Start();    
+            client = server.Accept();
+
+
         }
         #endregion
 

@@ -35,6 +35,7 @@ namespace Đồ_án_Caro
         UNDO,
         END_GAME,
         TIME_OUT,
+        CHAT,
         QUIT
     }
 }

@@ -73,13 +73,14 @@ namespace Đồ_án_Caro
             this.Player = new List<Player>()
             {
                 
-                new Player("Player_1", Properties.Resources.X),
-                new Player("Player_2", Properties.Resources.O)
+                new Player("player 1", Properties.Resources.X),
+                new Player("player 2", Properties.Resources.O)
             };
 
             PlayTimeLine = new Stack<PlayInfo>();
         }
         #endregion
+
 
         #region Methods
         public void DrawChessBoard()
